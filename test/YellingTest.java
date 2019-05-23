@@ -18,9 +18,7 @@ public class YellingTest {
 		@Test
 		public void testOneYelling() {
 			Yelling y = new Yelling();
-		
-			String name = "peter" ;
-			String output = y.Scream(name);
+			String output = y.Scream("peter");
 			assertEquals("peter is yelling", output);
 		}
 
