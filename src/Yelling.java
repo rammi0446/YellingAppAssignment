@@ -20,9 +20,10 @@ private static boolean isStringUpperCase(String str){
 /////////////////////////////////////////////////////////////////////////////
 public String Scream(String[] name)
 {
-	if(name[0] != "null")
+
+	String yelling = " is yelling";
+	if(name[0] != "null" && name.length==1)
 	{
-		String yelling = " is yelling";
 		boolean checkCase = isStringUpperCase(name[0]);
 		if(checkCase == true)
 		{
@@ -30,6 +31,13 @@ public String Scream(String[] name)
 		}	
 		return name[0] + yelling;
 	}
+	
+	else if(name[0] != "null" && name.length <= 2)
+	{
+		return name[0] + " and " + name[1]+ yelling;
+	}
 	return "Nobody is yelling";
 }
+
+
 }
