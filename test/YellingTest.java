@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class YellingTest {
+	Yelling y = new Yelling();
 
 	@Before
 	public void setUp() throws Exception {
@@ -17,7 +18,7 @@ public class YellingTest {
 	//R1: One Person is yelling
 		@Test
 		public void testOneYelling() {
-			Yelling y = new Yelling();
+			
 			String output = y.Scream("peter");
 			assertEquals("peter is yelling", output);
 		}
@@ -25,7 +26,6 @@ public class YellingTest {
 	//R2: NoBody is Yelling
 		@Test
 		public void testNoOneYelling() {
-			Yelling y = new Yelling();
 			String output = y.Scream("null");
 			assertEquals("Nobody is yelling", output);
 		}
