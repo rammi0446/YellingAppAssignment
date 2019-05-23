@@ -18,9 +18,9 @@ public class YellingTest {
 	//R1: One Person is yelling
 		@Test
 		public void testOneYelling() {
-			String[] name = { "peter" };
+			String[] name = { "a" };
 			String output = y.Scream(name);
-			assertEquals("peter is yelling", output);
+			assertEquals("a is yelling", output);
 		}
 		
 	//R2: NoBody is Yelling
@@ -34,9 +34,9 @@ public class YellingTest {
 	//R3: UpperCase is yelling
 		@Test
 		public void testUpperCaseYelling() {
-			String[] name = { "RAMAN" };
+			String[] name = { "B" };
 			String output = y.Scream(name);
-			assertEquals("RAMAN IS YELLING", output);
+			assertEquals("B IS YELLING", output);
 		}
 		
 	//R4: Two people are yelling
@@ -47,14 +47,22 @@ public class YellingTest {
 			assertEquals("peter and raman is yelling", output);
 		}
 		
-	//R4: Two people are yelling
+	//R5: More than two people are yelling
 				@Test
 				public void testMorePeopleYelling() {
-					String[] name = { "peter" , "raman" ,"sagar" };
+					String[] name = {"raman" ,"sagar" , "you"};
 					String output = y.Scream(name);
-					assertEquals("peter , raman and sagar is yelling", output);
+					assertEquals("raman , sagar and you is yelling", output);
 				}
 		
+	//R6: More and Upper are yelling
+				//R5: More than two people are yelling
+				@Test
+				public void testMoreUpperPeopleYelling() {
+					String[] name = {"abc" , "DEF" ,"ghi"};
+					String output = y.Scream(name);
+					assertEquals("peter , RAMAN and sagar is yelling , so is RAMAN", output);
+				}
 		
 
 }

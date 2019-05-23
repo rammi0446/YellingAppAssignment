@@ -20,11 +20,11 @@ private static boolean isStringUpperCase(String str){
 /////////////////////////////////////////////////////////////////////////////
 public String Scream(String[] name)
 {
-
+	boolean checkCase = false;
 	String yelling = " is yelling";
 	if(name[0] != "null" && name.length==1)
 	{
-		boolean checkCase = isStringUpperCase(name[0]);
+		checkCase = isStringUpperCase(name[0]);
 		if(checkCase == true)
 		{
 			yelling = yelling.toUpperCase();
@@ -32,29 +32,40 @@ public String Scream(String[] name)
 		return name[0] + yelling;
 	}
 	
+	
+	//more than two people
 	else if( name.length >= 2)
 	{
-		System.out.println("hello");
 		String n = "";
+		String upper = "";
+		
 		for(int i = 0; i< name.length ; i++)
 		{
-
+			 checkCase = isStringUpperCase(name[i]);
+		
+				if(checkCase == true)
+				{
+					upper = name[i];
+					n =	n + name[i] ;
+				}
+				
+				else if(checkCase == false)
+				{
 				n =	n + name[i] ; 
-				System.out.println("for loop");
 				if(i<(name.length-2))
 				{
 					n = n + " , ";
 				}
 				else if((name.length-2) == i)
 				{
+					System.out.println(i + n +name.length);
 					n = n + " and ";
 				}
-				
-		}return n + yelling;
+				}
+		}
+		return n + yelling;
 				
 	}	
-		
-	
 	return "Nobody is yelling";
 }
 
