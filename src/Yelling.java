@@ -32,10 +32,29 @@ public String Scream(String[] name)
 		return name[0] + yelling;
 	}
 	
-	else if(name[0] != "null" && name.length <= 2)
+	else if( name.length >= 2)
 	{
-		return name[0] + " and " + name[1]+ yelling;
-	}
+		System.out.println("hello");
+		String n = "";
+		for(int i = 0; i< name.length ; i++)
+		{
+
+				n =	n + name[i] ; 
+				System.out.println("for loop");
+				if(i<(name.length-2))
+				{
+					n = n + " , ";
+				}
+				else if((name.length-2) == i)
+				{
+					n = n + " and ";
+				}
+				
+		}return n + yelling;
+				
+	}	
+		
+	
 	return "Nobody is yelling";
 }
 

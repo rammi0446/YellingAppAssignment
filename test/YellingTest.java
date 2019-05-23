@@ -52,7 +52,7 @@ public class YellingTest {
 				public void testMorePeopleYelling() {
 					String[] name = { "peter" , "raman" ,"sagar" };
 					String output = y.Scream(name);
-					assertEquals("peter , raman and sagar are yelling", output);
+					assertEquals("peter , raman and sagar is yelling", output);
 				}
 		
 		
