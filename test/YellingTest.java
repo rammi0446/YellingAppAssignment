@@ -18,23 +18,33 @@ public class YellingTest {
 	//R1: One Person is yelling
 		@Test
 		public void testOneYelling() {
-			
-			String output = y.Scream("peter");
+			String[] name = { "peter" };
+			String output = y.Scream(name);
 			assertEquals("peter is yelling", output);
 		}
 		
 	//R2: NoBody is Yelling
 		@Test
 		public void testNoOneYelling() {
-			String output = y.Scream("null");
+			String[] name = { "null" };
+			String output = y.Scream(name);
 			assertEquals("Nobody is yelling", output);
 		}
 		
 	//R3: UpperCase is yelling
 		@Test
 		public void testUpperCaseYelling() {
-			String output = y.Scream("RAMAN");
+			String[] name = { "RAMAN" };
+			String output = y.Scream(name);
 			assertEquals("RAMAN IS YELLING", output);
+		}
+		
+	//R4: Two people are yelling
+		@Test
+		public void testTwoPeopleYelling() {
+			String[] name = { "peter" , "raman" };
+			String output = y.Scream(name);
+			assertEquals("raman is yelling", output);
 		}
 
 }

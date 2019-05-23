@@ -16,21 +16,20 @@ private static boolean isStringUpperCase(String str){
         
         return true;
     }
-//////////////////////
-public String Scream(String name)
+
+/////////////////////////////////////////////////////////////////////////////
+public String Scream(String[] name)
 {
-	if(name != "null")
+	if(name[0] != "null")
 	{
 		String yelling = " is yelling";
-		boolean checkCase = isStringUpperCase(name);
+		boolean checkCase = isStringUpperCase(name[0]);
 		if(checkCase == true)
 		{
 			yelling = yelling.toUpperCase();
-		}
-		
-	return name + yelling;
+		}	
+		return name[0] + yelling;
 	}
 	return "Nobody is yelling";
-	
 }
 }
