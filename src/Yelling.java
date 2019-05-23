@@ -22,6 +22,9 @@ public String Scream(String[] name)
 {
 	boolean checkCase = false;
 	String yelling = " is yelling";
+	String n = "";
+	String upper = "hello";
+	
 	if(name[0] != "null" && name.length==1)
 	{
 		checkCase = isStringUpperCase(name[0]);
@@ -36,32 +39,27 @@ public String Scream(String[] name)
 	//more than two people
 	else if( name.length >= 2)
 	{
-		String n = "";
-		String upper = "";
 		
 		for(int i = 0; i< name.length ; i++)
-		{
-			 checkCase = isStringUpperCase(name[i]);
-		
-				if(checkCase == true)
+		{ 
+				if(isStringUpperCase(name[i]))
 				{
 					upper = name[i];
-					n =	n + name[i] ;
 				}
-				
-				else if(checkCase == false)
-				{
-				n =	n + name[i] ; 
-				if(i<(name.length-2))
-				{
-					n = n + " , ";
-				}
-				else if((name.length-2) == i)
-				{
-					System.out.println(i + n +name.length);
-					n = n + " and ";
-				}
-				}
+					n =	n + name[i] ; 
+					if(i<(name.length-2))
+					{
+						n = n + " , ";
+					}
+					else if((name.length-2) == i)
+					{
+						n = n + " and ";
+					}		
+		}
+		
+		if(upper.toUpperCase()==upper)
+		{
+			return n+ yelling +". so is " +upper;
 		}
 		return n + yelling;
 				

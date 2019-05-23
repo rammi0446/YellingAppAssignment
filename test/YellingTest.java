@@ -61,7 +61,7 @@ public class YellingTest {
 				public void testMoreUpperPeopleYelling() {
 					String[] name = {"abc" , "DEF" ,"ghi"};
 					String output = y.Scream(name);
-					assertEquals("peter , RAMAN and sagar is yelling , so is RAMAN", output);
+					assertEquals("abc , DEF and ghi is yelling. so is DEF", output);
 				}
 		
 
