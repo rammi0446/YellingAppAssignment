@@ -46,5 +46,15 @@ public class YellingTest {
 			String output = y.Scream(name);
 			assertEquals("peter and raman is yelling", output);
 		}
+		
+	//R4: Two people are yelling
+				@Test
+				public void testMorePeopleYelling() {
+					String[] name = { "peter" , "raman" ,"sagar" };
+					String output = y.Scream(name);
+					assertEquals("peter , raman and sagar are yelling", output);
+				}
+		
+		
 
 }
