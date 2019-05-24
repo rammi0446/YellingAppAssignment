@@ -28,6 +28,7 @@ public String Scream(String[] name)
 	if(name[0] != "null" && name.length==1)
 	{
 		checkCase = isStringUpperCase(name[0]);
+		
 		if(checkCase == true)
 		{
 			yelling = yelling.toUpperCase();
